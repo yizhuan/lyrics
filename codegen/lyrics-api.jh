@@ -1,0 +1,62 @@
+entity song {	
+	name String
+  description String
+  composedBy String
+  artist String
+  album String
+  band String
+  year String
+  copyright String
+	lang String
+  audioUrl String
+  videoUrl String
+  enteredBy String
+	lastModified ZonedDateTime
+}
+
+entity lyrics {
+	songId Long
+  lyrics TextBlob
+  lang String
+  author String
+  copyright String
+  isTranslated Boolean
+  translatedBy String
+  charset String
+  lastModified ZonedDateTime
+}
+
+
+entity SocialUser {
+    provider String
+    socialUserId String
+    email String
+    name String
+    photoUrl String
+    firstName String
+    lastName String
+    authToken String
+    idToken String
+    authorizationCode String
+    /**
+     * Contains the entire object returned from the Facebook API based on the fields you requested.
+     * Only available for the Facebook provider.
+     * Refer to the Graph API for details: https://developers.facebook.com/docs/graph-api
+     */
+    facebook TextBlob
+    /**
+     * Contains the entire object returned from the Linked In API based on the fields you requested.
+     * Only available for the Linked In provider.
+     * Refer to the Linked In docs: https://developer.linkedin.com/docs/fields
+     */
+    linkedIn TextBlob    
+}
+
+
+
+// Set pagination options
+paginate * with infinite-scroll
+// paginate * with pagination
+
+// Set service options to all except few
+service all with serviceImpl

@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.fafafashop.lyrics",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "monolith",
+    "baseName": "lyrics",
+    "packageName": "com.fafafashop.lyrics",
+    "packageFolder": "com/fafafashop/lyrics",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MWJhMmExZDk2NThjNzQ4MGViYmM4M2JhYjA2NmRmNTk5Y2U3OTc0YjQ4NWM4YzY3YjFlOWE1MzUyNjc2MmE2M2FiYTg3ZTcwM2Q5ZGYxYWYwNjg1NWRjMGEyYzBlZTFkMDllZWRjNzczMGZhNTg1MDgwNDU0MWE5MWE0YzA1YWM=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "cosmo",
+    "clientThemeVariant": "light",
+    "creationTimestamp": 1594762270086,
+    "testFrameworks": ["gatling"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "zh-cn", "zh-tw", "fr", "de", "it", "ja", "ko", "pl", "pt-pt", "ru"],
+    "blueprints": []
+  }
+}
