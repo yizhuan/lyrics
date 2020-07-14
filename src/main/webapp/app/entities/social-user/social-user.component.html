@@ -1,0 +1,101 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="lyricsApp.socialUser.home.title">Social Users</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-social-user" [routerLink]="['/social-user/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span class="hidden-sm-down"  jhiTranslate="lyricsApp.socialUser.home.createLabel">
+            Create a new Social User
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'lyricsApp.socialUser.home.search' | translate }}">
+
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon icon="search"></fa-icon>
+                    </button>
+
+                    <button class="input-group-append btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+                        <fa-icon icon="trash-alt"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="socialUsers?.length === 0">
+        <span jhiTranslate="lyricsApp.socialUser.home.notFound">No socialUsers found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="socialUsers && socialUsers.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="reset.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="provider"><span jhiTranslate="lyricsApp.socialUser.provider">Provider</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="socialUserId"><span jhiTranslate="lyricsApp.socialUser.socialUserId">Social User Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="email"><span jhiTranslate="lyricsApp.socialUser.email">Email</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="name"><span jhiTranslate="lyricsApp.socialUser.name">Name</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="photoUrl"><span jhiTranslate="lyricsApp.socialUser.photoUrl">Photo Url</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="firstName"><span jhiTranslate="lyricsApp.socialUser.firstName">First Name</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="lastName"><span jhiTranslate="lyricsApp.socialUser.lastName">Last Name</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="authToken"><span jhiTranslate="lyricsApp.socialUser.authToken">Auth Token</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="idToken"><span jhiTranslate="lyricsApp.socialUser.idToken">Id Token</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="authorizationCode"><span jhiTranslate="lyricsApp.socialUser.authorizationCode">Authorization Code</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="facebook"><span jhiTranslate="lyricsApp.socialUser.facebook">Facebook</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="linkedIn"><span jhiTranslate="lyricsApp.socialUser.linkedIn">Linked In</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+                <tr *ngFor="let socialUser of socialUsers ;trackBy: trackId">
+                    <td><a [routerLink]="['/social-user', socialUser.id, 'view']">{{ socialUser.id }}</a></td>
+                    <td>{{ socialUser.provider }}</td>
+                    <td>{{ socialUser.socialUserId }}</td>
+                    <td>{{ socialUser.email }}</td>
+                    <td>{{ socialUser.name }}</td>
+                    <td>{{ socialUser.photoUrl }}</td>
+                    <td>{{ socialUser.firstName }}</td>
+                    <td>{{ socialUser.lastName }}</td>
+                    <td>{{ socialUser.authToken }}</td>
+                    <td>{{ socialUser.idToken }}</td>
+                    <td>{{ socialUser.authorizationCode }}</td>
+                    <td>{{ socialUser.facebook }}</td>
+                    <td>{{ socialUser.linkedIn }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/social-user', socialUser.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/social-user', socialUser.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(socialUser)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

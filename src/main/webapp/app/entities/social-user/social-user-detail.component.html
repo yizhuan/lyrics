@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="socialUser">
+            <h2><span jhiTranslate="lyricsApp.socialUser.detail.title">Social User</span> {{ socialUser.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="lyricsApp.socialUser.provider">Provider</span></dt>
+                <dd>
+                    <span>{{ socialUser.provider }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.socialUserId">Social User Id</span></dt>
+                <dd>
+                    <span>{{ socialUser.socialUserId }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.email">Email</span></dt>
+                <dd>
+                    <span>{{ socialUser.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.name">Name</span></dt>
+                <dd>
+                    <span>{{ socialUser.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.photoUrl">Photo Url</span></dt>
+                <dd>
+                    <span>{{ socialUser.photoUrl }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{ socialUser.firstName }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{ socialUser.lastName }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.authToken">Auth Token</span></dt>
+                <dd>
+                    <span>{{ socialUser.authToken }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.idToken">Id Token</span></dt>
+                <dd>
+                    <span>{{ socialUser.idToken }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.authorizationCode">Authorization Code</span></dt>
+                <dd>
+                    <span>{{ socialUser.authorizationCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.facebook" [ngbTooltip]="'lyricsApp.socialUser.help.facebook' | translate">Facebook</span></dt>
+                <dd>
+                    <span>{{ socialUser.facebook }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.socialUser.linkedIn" [ngbTooltip]="'lyricsApp.socialUser.help.linkedIn' | translate">Linked In</span></dt>
+                <dd>
+                    <span>{{ socialUser.linkedIn }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/social-user', socialUser.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

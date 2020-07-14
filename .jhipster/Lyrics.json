@@ -1,0 +1,54 @@
+{
+  "name": "Lyrics",
+  "fields": [
+    {
+      "fieldName": "songId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lyrics",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "lang",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "author",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "copyright",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isTranslated",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "translatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "charset",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200714214143",
+  "entityTableName": "lyrics",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

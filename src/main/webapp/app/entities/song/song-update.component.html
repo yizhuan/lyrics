@@ -1,0 +1,105 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-song-heading" jhiTranslate="lyricsApp.song.home.createOrEditLabel">Create or edit a Song</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                           formControlName="description"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.composedBy" for="field_composedBy">Composed By</label>
+                    <input type="text" class="form-control" name="composedBy" id="field_composedBy"
+                           formControlName="composedBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.artist" for="field_artist">Artist</label>
+                    <input type="text" class="form-control" name="artist" id="field_artist"
+                           formControlName="artist"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.album" for="field_album">Album</label>
+                    <input type="text" class="form-control" name="album" id="field_album"
+                           formControlName="album"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.band" for="field_band">Band</label>
+                    <input type="text" class="form-control" name="band" id="field_band"
+                           formControlName="band"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.year" for="field_year">Year</label>
+                    <input type="text" class="form-control" name="year" id="field_year"
+                           formControlName="year"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.copyright" for="field_copyright">Copyright</label>
+                    <input type="text" class="form-control" name="copyright" id="field_copyright"
+                           formControlName="copyright"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.lang" for="field_lang">Lang</label>
+                    <input type="text" class="form-control" name="lang" id="field_lang"
+                           formControlName="lang"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.audioUrl" for="field_audioUrl">Audio Url</label>
+                    <input type="text" class="form-control" name="audioUrl" id="field_audioUrl"
+                           formControlName="audioUrl"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.videoUrl" for="field_videoUrl">Video Url</label>
+                    <input type="text" class="form-control" name="videoUrl" id="field_videoUrl"
+                           formControlName="videoUrl"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.enteredBy" for="field_enteredBy">Entered By</label>
+                    <input type="text" class="form-control" name="enteredBy" id="field_enteredBy"
+                           formControlName="enteredBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.song.lastModified" for="field_lastModified">Last Modified</label>
+                    <div class="d-flex">
+                        <input id="field_lastModified" type="datetime-local" class="form-control" name="lastModified" formControlName="lastModified" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

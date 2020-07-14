@@ -1,0 +1,38 @@
+{
+  "lyricsApp": {
+    "socialUser": {
+      "home": {
+        "title": "Social Users",
+        "createLabel": "Create a new Social User",
+        "createOrEditLabel": "Create or edit a Social User",
+        "search": "Search for Social User",
+        "notFound": "No Social Users found"
+      },
+      "created": "A new Social User is created with identifier {{ param }}",
+      "updated": "A Social User is updated with identifier {{ param }}",
+      "deleted": "A Social User is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Social User {{ id }}?"
+      },
+      "detail": {
+        "title": "Social User"
+      },
+      "provider": "Provider",
+      "socialUserId": "Social User Id",
+      "email": "Email",
+      "name": "Name",
+      "photoUrl": "Photo Url",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "authToken": "Auth Token",
+      "idToken": "Id Token",
+      "authorizationCode": "Authorization Code",
+      "facebook": "Facebook",
+      "linkedIn": "Linked In",
+      "help": {
+        "facebook": "Contains the entire object returned from the Facebook API based on the fields you requested.\nOnly available for the Facebook provider.\nRefer to the Graph API for details: https:",
+        "linkedIn": "Contains the entire object returned from the Linked In API based on the fields you requested.\nOnly available for the Linked In provider.\nRefer to the Linked In docs: https:"
+      }
+    }
+  }
+}

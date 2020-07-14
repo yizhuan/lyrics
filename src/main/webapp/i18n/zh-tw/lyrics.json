@@ -1,0 +1,31 @@
+{
+  "lyricsApp": {
+    "lyrics": {
+      "home": {
+        "title": "Lyrics",
+        "createLabel": "建立一筆新的 Lyrics",
+        "createOrEditLabel": "建立或編輯 Lyrics",
+        "search": "搜尋 Lyrics",
+        "notFound": "No Lyrics found"
+      },
+      "created": "新的 Lyrics 建立成功，識別碼為 {{ param }}",
+      "updated": "識別碼為 {{ param }} 的 Lyrics 更新成功",
+      "deleted": "識別碼為 {{ param }} 的 Lyrics 刪除成功",
+      "delete": {
+        "question": "您確定要刪除 Lyrics {{ id }} 嗎?"
+      },
+      "detail": {
+        "title": "Lyrics"
+      },
+      "songId": "Song Id",
+      "lyrics": "Lyrics",
+      "lang": "Lang",
+      "author": "Author",
+      "copyright": "Copyright",
+      "isTranslated": "Is Translated",
+      "translatedBy": "Translated By",
+      "charset": "Charset",
+      "lastModified": "Last Modified"
+    }
+  }
+}

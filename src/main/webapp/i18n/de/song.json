@@ -1,0 +1,35 @@
+{
+  "lyricsApp": {
+    "song": {
+      "home": {
+        "title": "Songs",
+        "createLabel": "Song erstellen",
+        "createOrEditLabel": "Song erstellen oder bearbeiten",
+        "search": "Suche nach Song",
+        "notFound": "No Songs found"
+      },
+      "created": "Song erstellt mit ID {{ param }}",
+      "updated": "Song aktualisiert mit ID {{ param }}",
+      "deleted": "Song gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Song {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Song"
+      },
+      "name": "Name",
+      "description": "Description",
+      "composedBy": "Composed By",
+      "artist": "Artist",
+      "album": "Album",
+      "band": "Band",
+      "year": "Year",
+      "copyright": "Copyright",
+      "lang": "Lang",
+      "audioUrl": "Audio Url",
+      "videoUrl": "Video Url",
+      "enteredBy": "Entered By",
+      "lastModified": "Last Modified"
+    }
+  }
+}

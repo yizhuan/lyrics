@@ -1,0 +1,69 @@
+{
+  "name": "SocialUser",
+  "fields": [
+    {
+      "fieldName": "provider",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "socialUserId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "photoUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "authToken",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idToken",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "authorizationCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "facebook",
+      "fieldType": "byte[]",
+      "javadoc": "Contains the entire object returned from the Facebook API based on the fields you requested.\\nOnly available for the Facebook provider.\\nRefer to the Graph API for details: https:",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "linkedIn",
+      "fieldType": "byte[]",
+      "javadoc": "Contains the entire object returned from the Linked In API based on the fields you requested.\\nOnly available for the Linked In provider.\\nRefer to the Linked In docs: https:",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200714214243",
+  "entityTableName": "social_user",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

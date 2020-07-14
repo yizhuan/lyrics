@@ -1,0 +1,35 @@
+{
+  "lyricsApp": {
+    "song": {
+      "home": {
+        "title": "Songs",
+        "createLabel": "Song を追加",
+        "createOrEditLabel": "Songを追加または編集",
+        "search": "Search for Song",
+        "notFound": "No Songs found"
+      },
+      "created": "A new Song is created with identifier {{ param }}",
+      "updated": "A Song is updated with identifier {{ param }}",
+      "deleted": "A Song is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Song {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Song"
+      },
+      "name": "Name",
+      "description": "Description",
+      "composedBy": "Composed By",
+      "artist": "Artist",
+      "album": "Album",
+      "band": "Band",
+      "year": "Year",
+      "copyright": "Copyright",
+      "lang": "Lang",
+      "audioUrl": "Audio Url",
+      "videoUrl": "Video Url",
+      "enteredBy": "Entered By",
+      "lastModified": "Last Modified"
+    }
+  }
+}

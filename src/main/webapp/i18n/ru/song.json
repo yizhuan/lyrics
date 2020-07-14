@@ -1,0 +1,35 @@
+{
+  "lyricsApp": {
+    "song": {
+      "home": {
+        "title": "Songs",
+        "createLabel": "Создать новый Song",
+        "createOrEditLabel": "Создать или отредактировать Song",
+        "search": "Найти Song",
+        "notFound": "No Songs found"
+      },
+      "created": "Новый Song создан с идентификатором {{ param }}",
+      "updated": "Song обновлен с идентификатором {{ param }}",
+      "deleted": "Song удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Song {{ id }}?"
+      },
+      "detail": {
+        "title": "Song"
+      },
+      "name": "Name",
+      "description": "Description",
+      "composedBy": "Composed By",
+      "artist": "Artist",
+      "album": "Album",
+      "band": "Band",
+      "year": "Year",
+      "copyright": "Copyright",
+      "lang": "Lang",
+      "audioUrl": "Audio Url",
+      "videoUrl": "Video Url",
+      "enteredBy": "Entered By",
+      "lastModified": "Last Modified"
+    }
+  }
+}

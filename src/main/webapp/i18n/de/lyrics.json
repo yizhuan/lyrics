@@ -1,0 +1,31 @@
+{
+  "lyricsApp": {
+    "lyrics": {
+      "home": {
+        "title": "Lyrics",
+        "createLabel": "Lyrics erstellen",
+        "createOrEditLabel": "Lyrics erstellen oder bearbeiten",
+        "search": "Suche nach Lyrics",
+        "notFound": "No Lyrics found"
+      },
+      "created": "Lyrics erstellt mit ID {{ param }}",
+      "updated": "Lyrics aktualisiert mit ID {{ param }}",
+      "deleted": "Lyrics gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Lyrics {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Lyrics"
+      },
+      "songId": "Song Id",
+      "lyrics": "Lyrics",
+      "lang": "Lang",
+      "author": "Author",
+      "copyright": "Copyright",
+      "isTranslated": "Is Translated",
+      "translatedBy": "Translated By",
+      "charset": "Charset",
+      "lastModified": "Last Modified"
+    }
+  }
+}

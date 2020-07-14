@@ -48,6 +48,9 @@ public class CacheConfiguration {
             createCache(cm, com.fafafashop.lyrics.domain.User.class.getName());
             createCache(cm, com.fafafashop.lyrics.domain.Authority.class.getName());
             createCache(cm, com.fafafashop.lyrics.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.fafafashop.lyrics.domain.Song.class.getName());
+            createCache(cm, com.fafafashop.lyrics.domain.Lyrics.class.getName());
+            createCache(cm, com.fafafashop.lyrics.domain.SocialUser.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

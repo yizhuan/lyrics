@@ -1,0 +1,31 @@
+{
+  "lyricsApp": {
+    "lyrics": {
+      "home": {
+        "title": "Lyrics",
+        "createLabel": "Lyrics を追加",
+        "createOrEditLabel": "Lyricsを追加または編集",
+        "search": "Search for Lyrics",
+        "notFound": "No Lyrics found"
+      },
+      "created": "A new Lyrics is created with identifier {{ param }}",
+      "updated": "A Lyrics is updated with identifier {{ param }}",
+      "deleted": "A Lyrics is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Lyrics {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Lyrics"
+      },
+      "songId": "Song Id",
+      "lyrics": "Lyrics",
+      "lang": "Lang",
+      "author": "Author",
+      "copyright": "Copyright",
+      "isTranslated": "Is Translated",
+      "translatedBy": "Translated By",
+      "charset": "Charset",
+      "lastModified": "Last Modified"
+    }
+  }
+}

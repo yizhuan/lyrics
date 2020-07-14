@@ -1,0 +1,98 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-social-user-heading" jhiTranslate="lyricsApp.socialUser.home.createOrEditLabel">Create or edit a Social User</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.provider" for="field_provider">Provider</label>
+                    <input type="text" class="form-control" name="provider" id="field_provider"
+                           formControlName="provider"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.socialUserId" for="field_socialUserId">Social User Id</label>
+                    <input type="text" class="form-control" name="socialUserId" id="field_socialUserId"
+                           formControlName="socialUserId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.photoUrl" for="field_photoUrl">Photo Url</label>
+                    <input type="text" class="form-control" name="photoUrl" id="field_photoUrl"
+                           formControlName="photoUrl"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.firstName" for="field_firstName">First Name</label>
+                    <input type="text" class="form-control" name="firstName" id="field_firstName"
+                           formControlName="firstName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.lastName" for="field_lastName">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" id="field_lastName"
+                           formControlName="lastName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.authToken" for="field_authToken">Auth Token</label>
+                    <input type="text" class="form-control" name="authToken" id="field_authToken"
+                           formControlName="authToken"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.idToken" for="field_idToken">Id Token</label>
+                    <input type="text" class="form-control" name="idToken" id="field_idToken"
+                           formControlName="idToken"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.authorizationCode" for="field_authorizationCode">Authorization Code</label>
+                    <input type="text" class="form-control" name="authorizationCode" id="field_authorizationCode"
+                           formControlName="authorizationCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.facebook" for="field_facebook" [ngbTooltip]="'lyricsApp.socialUser.help.facebook' | translate">Facebook</label>
+                    <textarea class="form-control" name="facebook" id="field_facebook"
+                              formControlName="facebook"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="lyricsApp.socialUser.linkedIn" for="field_linkedIn" [ngbTooltip]="'lyricsApp.socialUser.help.linkedIn' | translate">Linked In</label>
+                    <textarea class="form-control" name="linkedIn" id="field_linkedIn"
+                              formControlName="linkedIn"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

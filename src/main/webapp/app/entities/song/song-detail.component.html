@@ -1,0 +1,78 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="song">
+            <h2><span jhiTranslate="lyricsApp.song.detail.title">Song</span> {{ song.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="lyricsApp.song.name">Name</span></dt>
+                <dd>
+                    <span>{{ song.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.description">Description</span></dt>
+                <dd>
+                    <span>{{ song.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.composedBy">Composed By</span></dt>
+                <dd>
+                    <span>{{ song.composedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.artist">Artist</span></dt>
+                <dd>
+                    <span>{{ song.artist }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.album">Album</span></dt>
+                <dd>
+                    <span>{{ song.album }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.band">Band</span></dt>
+                <dd>
+                    <span>{{ song.band }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.year">Year</span></dt>
+                <dd>
+                    <span>{{ song.year }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.copyright">Copyright</span></dt>
+                <dd>
+                    <span>{{ song.copyright }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.lang">Lang</span></dt>
+                <dd>
+                    <span>{{ song.lang }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.audioUrl">Audio Url</span></dt>
+                <dd>
+                    <span>{{ song.audioUrl }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.videoUrl">Video Url</span></dt>
+                <dd>
+                    <span>{{ song.videoUrl }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.enteredBy">Entered By</span></dt>
+                <dd>
+                    <span>{{ song.enteredBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.song.lastModified">Last Modified</span></dt>
+                <dd>
+                    <span>{{ song.lastModified }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/song', song.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+{
+  "lyricsApp": {
+    "song": {
+      "home": {
+        "title": "Songs",
+        "createLabel": "Genera un nuovo Song",
+        "createOrEditLabel": "Genera o modifica un Song",
+        "search": "Cerca Song",
+        "notFound": "No Songs found"
+      },
+      "created": "&Egrave; stato generato un nuovo Song con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Song identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Song con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Song {{ id }}?"
+      },
+      "detail": {
+        "title": "Song"
+      },
+      "name": "Name",
+      "description": "Description",
+      "composedBy": "Composed By",
+      "artist": "Artist",
+      "album": "Album",
+      "band": "Band",
+      "year": "Year",
+      "copyright": "Copyright",
+      "lang": "Lang",
+      "audioUrl": "Audio Url",
+      "videoUrl": "Video Url",
+      "enteredBy": "Entered By",
+      "lastModified": "Last Modified"
+    }
+  }
+}

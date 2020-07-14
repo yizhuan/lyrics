@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="lyrics">
+            <h2><span jhiTranslate="lyricsApp.lyrics.detail.title">Lyrics</span> {{ lyrics.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="lyricsApp.lyrics.songId">Song Id</span></dt>
+                <dd>
+                    <span>{{ lyrics.songId }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.lyrics.lyrics">Lyrics</span></dt>
+                <dd>
+                    <span>{{ lyrics.lyrics }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.lyrics.lang">Lang</span></dt>
+                <dd>
+                    <span>{{ lyrics.lang }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.lyrics.author">Author</span></dt>
+                <dd>
+                    <span>{{ lyrics.author }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.lyrics.copyright">Copyright</span></dt>
+                <dd>
+                    <span>{{ lyrics.copyright }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.lyrics.isTranslated">Is Translated</span></dt>
+                <dd>
+                    <span>{{ lyrics.isTranslated }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.lyrics.translatedBy">Translated By</span></dt>
+                <dd>
+                    <span>{{ lyrics.translatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.lyrics.charset">Charset</span></dt>
+                <dd>
+                    <span>{{ lyrics.charset }}</span>
+                </dd>
+                <dt><span jhiTranslate="lyricsApp.lyrics.lastModified">Last Modified</span></dt>
+                <dd>
+                    <span>{{ lyrics.lastModified }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/lyrics', lyrics.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

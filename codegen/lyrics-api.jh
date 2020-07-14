@@ -1,4 +1,4 @@
-entity song {	
+entity Song {	
 	name String
   description String
   composedBy String
@@ -14,7 +14,7 @@ entity song {
 	lastModified ZonedDateTime
 }
 
-entity lyrics {
+entity Lyrics {
 	songId Long
   lyrics TextBlob
   lang String
