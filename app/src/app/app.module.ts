@@ -37,7 +37,7 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [BrowserModule, 
     HttpClientModule, 
     IonicModule.forRoot(), 
-    AppRoutingModule, 
+    AppRoutingModule,     
     SocialLoginModule,
     IonicStorageModule.forRoot(), 
     NgxWebstorageModule.forRoot(),     
