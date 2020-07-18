@@ -222,7 +222,7 @@ public class SocialUserResourceIT {
             .andExpect(jsonPath("$.[*].firstName").value(hasItem(DEFAULT_FIRST_NAME)))
             .andExpect(jsonPath("$.[*].lastName").value(hasItem(DEFAULT_LAST_NAME)))
             .andExpect(jsonPath("$.[*].authToken").value(hasItem(DEFAULT_AUTH_TOKEN)))
-            .andExpect(jsonPath("$.[*].idToken").value(hasItem(DEFAULT_ID_TOKEN)))
+            .andExpect(jsonPath("$.[*].idToken").value(hasItem(DEFAULT_ID_TOKEN.toString())))
             .andExpect(jsonPath("$.[*].authorizationCode").value(hasItem(DEFAULT_AUTHORIZATION_CODE)))
             .andExpect(jsonPath("$.[*].facebook").value(hasItem(DEFAULT_FACEBOOK.toString())))
             .andExpect(jsonPath("$.[*].linkedIn").value(hasItem(DEFAULT_LINKED_IN.toString())));
@@ -247,7 +247,7 @@ public class SocialUserResourceIT {
             .andExpect(jsonPath("$.firstName").value(DEFAULT_FIRST_NAME))
             .andExpect(jsonPath("$.lastName").value(DEFAULT_LAST_NAME))
             .andExpect(jsonPath("$.authToken").value(DEFAULT_AUTH_TOKEN))
-            .andExpect(jsonPath("$.idToken").value(DEFAULT_ID_TOKEN))
+            .andExpect(jsonPath("$.idToken").value(DEFAULT_ID_TOKEN.toString()))
             .andExpect(jsonPath("$.authorizationCode").value(DEFAULT_AUTHORIZATION_CODE))
             .andExpect(jsonPath("$.facebook").value(DEFAULT_FACEBOOK.toString()))
             .andExpect(jsonPath("$.linkedIn").value(DEFAULT_LINKED_IN.toString()));
@@ -374,7 +374,7 @@ public class SocialUserResourceIT {
             .andExpect(jsonPath("$.[*].firstName").value(hasItem(DEFAULT_FIRST_NAME)))
             .andExpect(jsonPath("$.[*].lastName").value(hasItem(DEFAULT_LAST_NAME)))
             .andExpect(jsonPath("$.[*].authToken").value(hasItem(DEFAULT_AUTH_TOKEN)))
-            .andExpect(jsonPath("$.[*].idToken").value(hasItem(DEFAULT_ID_TOKEN)))
+            .andExpect(jsonPath("$.[*].idToken").value(hasItem(DEFAULT_ID_TOKEN.toString())))
             .andExpect(jsonPath("$.[*].authorizationCode").value(hasItem(DEFAULT_AUTHORIZATION_CODE)))
             .andExpect(jsonPath("$.[*].facebook").value(hasItem(DEFAULT_FACEBOOK.toString())))
             .andExpect(jsonPath("$.[*].linkedIn").value(hasItem(DEFAULT_LINKED_IN.toString())));

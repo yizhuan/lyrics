@@ -1,0 +1,27 @@
+entity Song {	
+	name String
+  description String
+  composedBy String
+  artist String
+  album String
+  band String
+  year String
+  copyright String
+	lang String
+  audioUrl String
+  videoUrl String
+  enteredBy String
+	lastModified ZonedDateTime
+}
+
+entity Lyrics {
+	songId Long
+  lyrics TextBlob
+  lang String
+  author String
+  copyright String
+  isTranslated Boolean
+  translatedBy String
+  charset String
+  lastModified ZonedDateTime
+}

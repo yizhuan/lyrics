@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+  </ion-buttons>
+    <ion-title>{{ 'SIGNUP' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-grid>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-list lines="full" class="ion-no-margin ion-no-padding">
+
+            <ion-item>
+              <ion-label position="stacked">{{ 'MOBILE_NUMBER'|translate }} *</ion-label>
+              <ion-input type="text" ngModel name="mobileNumber" required #mobileNumberCtl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!mobileNumberCtl.valid && mobileNumberCtl.touched" lines="none">
+              <ion-label>{{ 'SHOULD_BE_A_VALID_MOBILE_NUMBER' | translate }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">{{'EMAIL'|translate}} *</ion-label>
+              <ion-input type="text" ngModel name="email" required email #emailCtl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!emailCtl.valid && emailCtl.touched" lines="none">
+              <ion-label>{{ 'SHOULD_BE_A_VALID_EMAIL_ADDRESS' | translate }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">{{ 'PASSWORD'|translate }} *</ion-label>
+              <ion-input type="password" ngModel name="password" required password minlength="4" #passwordCtl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!passwordCtl.valid && passwordCtl.touched" lines="none">
+              <ion-label>{{ 'SHOULD_BE_AT_LEAST_X_CHARACTERS_LONG' | translate: {minlength: 4} }}</ion-label>
+            </ion-item>  
+
+            <ion-item>
+              <ion-label position="stacked">{{ 'FIRST_NAME' | translate }} *</ion-label>
+              <ion-input type="text" ngModel name="firstName" required #firstNameCtl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!firstNameCtl.valid && firstNameCtl.touched" lines="none">
+              <ion-label>{{ 'SHOULD_BE_A_VALID_FIRST_NAME' | translate }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">{{ 'LAST_NAME' |translate }} *</ion-label>
+              <ion-input type="text" ngModel name="lastName" required #lastNameCtl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!lastNameCtl.valid && lastNameCtl.touched" lines="none">
+              <ion-label>{{ 'SHOULD_BE_A_VALID_LAST_NAME' | translate }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">{{ 'PREFERRED_LANGUAGE' | translate }} *</ion-label>
+              <ion-select ngModel name="langKey" required #langKeyCtl="ngModel">
+                <ion-select-option *ngFor="let lang of languages" [value]="lang.code">{{lang.language}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item *ngIf="!langKeyCtl.valid && langKeyCtl.touched" lines="none">
+              <ion-label>{{ 'SHOULD_BE_A_VALID_LANGUAGE_NAME' | translate }}</ion-label>
+            </ion-item>
+
+
+          </ion-list>
+        
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col  size-sm="6" offset-sm="3">
+          <ion-button type="submit" color="primary" expand="block" [disabled]="!f.valid">
+            {{ 'SIGNUP_BUTTON' | translate }}
+          </ion-button>              
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
+
+
+</ion-content>

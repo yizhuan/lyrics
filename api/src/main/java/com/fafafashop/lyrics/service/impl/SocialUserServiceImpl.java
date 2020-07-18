@@ -69,4 +69,18 @@ public class SocialUserServiceImpl implements SocialUserService {
     public Page<SocialUser> search(String query, Pageable pageable) {
         log.debug("Request to search for a page of SocialUsers for query {}", query);
         return socialUserSearchRepository.search(queryStringQuery(query), pageable);    }
+    
+    
+    @Override
+    public Optional<SocialUser> findOneByEmailIgnoreCase(String email) {
+    	return socialUserRepository.findOneByEmailIgnoreCase(email);
+    }
+
+	@Override
+	public Optional<SocialUser> findOneByEmailIgnoreCaseAndProviderIgnoreCase(String email, String provider) {
+		return this.socialUserRepository.findOneByEmailIgnoreCaseAndProviderIgnoreCase(email, provider);
+	}
+    
+    
+    
 }

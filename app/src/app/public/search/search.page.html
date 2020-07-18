@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Songs</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar (ionChange)="onSearchSong($event)" debounce="1000" size-sm="6" offset-sm="3"></ion-searchbar>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-row *ngFor="let song of searchResults">
+          <!--
+          <ion-col>
+            <ion-label [routerLink]="['/home',{songId: song.id, lang: song.lang}]" color="primary">{{ song.name }}</ion-label>
+          </ion-col>        
+          -->
+          <ion-col size-sm="6" offset-sm="3">
+            <a [attr.href]="'/home?songId=' + song.id + '&lang='+ song.lang">{{ song.name }}</a>
+          </ion-col>
+        </ion-row>
+      </ion-list>    
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

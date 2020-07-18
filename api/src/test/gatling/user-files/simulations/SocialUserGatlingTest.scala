@@ -80,7 +80,7 @@ class SocialUserGatlingTest extends Simulation {
                 , "firstName":"SAMPLE_TEXT"
                 , "lastName":"SAMPLE_TEXT"
                 , "authToken":"SAMPLE_TEXT"
-                , "idToken":"SAMPLE_TEXT"
+                , "idToken":null
                 , "authorizationCode":"SAMPLE_TEXT"
                 , "facebook":null
                 , "linkedIn":null

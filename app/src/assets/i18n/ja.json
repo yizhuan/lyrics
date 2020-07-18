@@ -1,0 +1,66 @@
+{
+	"LANGUAGE": "言語",
+	"PREFERRED_LANGUAGE": "優先言語",
+
+	"BACK_BUTTON_TEXT": "戻る",
+
+	"BOOK_A_TABLE": "席を予約する",
+	"MY_BOOKINGS": "私の予約",	
+
+	"NAME": "フルネーム",
+	"FIRST_NAME": "ファーストネーム",
+	"LAST_NAME": "苗字",
+	"EMAIL": "Eメール",
+	"MOBILE_NUMBER": "携帯電話番号",
+	"USERNAME": "ユーザー名",
+	"PASSWORD": "パスワード",
+	"REMEMBER_ME": "覚えて",
+	"LOGIN": "サインイン",
+	"SIGNUP": "サインアップ",
+	"NO_ACCOUNT_YET": "まだアカウントがありません? サインアップ",
+
+	"WELCOME_TITLE": "ようこそ",
+	"LOGOUT_TITLE": "ログアウト",
+
+	"LOGIN_TITLE": "サインイン",
+	"LOGIN_ERROR": "サインインできません。アカウント情報を確認して、もう一度お試しください。",
+	"LOGIN_BUTTON": "サインイン",
+	"SIGNUP_TITLE": "サインアップ",
+	"SIGNUP_ERROR": "アカウントを作成できません。 アカウント情報を確認して、もう一度お試しください。",
+	"SIGNUP_SUCCESS": "Registration saved! Please check your email for confirmation.",
+	"EXISTING_USER_ERROR": "Email is already in use! Please choose another one.",
+	"INVALID_PASSWORD_ERROR": "Invalid password, please try again.",
+	"SIGNUP_BUTTON": "サインアップ",
+	"SIGNOUT_BUTTON": "ログアウト",
+
+	"MOBILE_NUMBER_OR_EMAIL": "携帯番号またはメール",
+	"SHOULD_BE_A_MOBILE_NUMBER_OR_A_VALID_EMAIL_ADDRESS": "Should be a mobile number or a valid email address.",
+
+	"SHOULD_BE_A_VALID_MOBILE_NUMBER": "Should be a valid mobile number.",
+	"SHOULD_BE_A_VALID_EMAIL_ADDRESS": "Should be a valid email address.",
+	"SHOULD_BE_AT_LEAST_X_CHARACTERS_LONG": "Should be at least {{minlength}} characters long.",
+	"SHOULD_BE_A_VALID_FIRST_NAME": "Should be a valid first name.",
+	"SHOULD_BE_A_VALID_LAST_NAME": "Should be a valid last name.",
+	"SHOULD_BE_A_VALID_LANGUAGE_NAME": "Should be a valid language name.",
+
+	"BOOK_TABLE_TITLE": "席を予約する",
+	"NUMBER_OF_GUESTS": "客数",
+	"NUMBER_OF_TABLES":"テーブル数",
+	"OPTIONAL": "オプション",
+	"DATE": "年月日",
+	"TIME": "時間",
+	"MESSAGE": "メッセージ",
+	"LEAVE_A_MESSAGE_IF_YOU_HAVE_OTHER_REQUIREMENTS": "他の要件がある場合はメッセージを残してください",
+	"BOOK_TABLE_BUTTON": "予約",
+
+	"SHOULD_BE_A_VALID_INTEGER_X": "Should be a valid integer {{int_range}}.",
+	"SHOULD_BE_A_FUTURE_TIME": "Should be a future time.",
+	"SHOULD_BE_LESS_THAN_X_CHARACTERS_LONG": "Should be less than {{maxlength}} characters long.",
+
+	"BOOKINGS_TITLE": "注文",
+	"GUESTS": "客数",
+	"TABLES": "テーブル数",
+
+	"CANCELLING": "キャンセルしています"
+  
+}

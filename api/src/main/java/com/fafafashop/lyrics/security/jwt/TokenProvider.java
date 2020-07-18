@@ -81,13 +81,32 @@ public class TokenProvider {
             .compact();
     }
 
-    public Authentication getAuthentication(String token) {
-        Claims claims = Jwts.parserBuilder()
-            .setSigningKey(key)
-            .build()
-            .parseClaimsJws(token)
-            .getBody();
+    public String createToken(String subject, String authorities, boolean rememberMe) {
 
+        long now = (new Date()).getTime();
+        Date validity;
+        if (rememberMe) {
+            validity = new Date(now + this.tokenValidityInMillisecondsForRememberMe);
+        } else {
+            validity = new Date(now + this.tokenValidityInMilliseconds);
+        }
+
+        return Jwts.builder()
+            .setSubject(subject)
+            .claim(AUTHORITIES_KEY, authorities)
+            .signWith(key, SignatureAlgorithm.HS512)
+            .setExpiration(validity)
+            .compact();
+    }    
+    
+    public Authentication getAuthentication(String token) {
+    	
+        Claims claims = Jwts.parserBuilder()
+        		.setSigningKey(key)                 
+                .build()
+                .parseClaimsJws(token)
+                .getBody();               
+        
         Collection<? extends GrantedAuthority> authorities =
             Arrays.stream(claims.get(AUTHORITIES_KEY).toString().split(","))
                 .map(SimpleGrantedAuthority::new)

@@ -1,0 +1,67 @@
+{
+    "LANGUAGE": "语言",
+	"PREFERRED_LANGUAGE": "首选语言",
+
+    "BACK_BUTTON_TEXT": "返回",
+
+	"BOOK_A_TABLE": "预订桌子",
+	"MY_BOOKINGS": "我的订单",	
+
+    "NAME": "名字",
+    "FIRST_NAME": "名",
+    "LAST_NAME": "姓",
+    "EMAIL": "电子邮件",
+	"MOBILE_NUMBER": "手机号",
+    "USERNAME": "账户名",
+    "PASSWORD": "密码",
+    "REMEMBER_ME": "记住帐户",
+	"LOGIN": "登录",
+	"SIGNUP": "注册",
+	"NO_ACCOUNT_YET": "还没有帐号？ 注册帐号",
+
+	"WELCOME_TITLE": "欢迎",
+	"LOGOUT_TITLE": "退出登录",
+
+    "LOGIN_TITLE": "登录",
+    "LOGIN_BUTTON": "登录",
+    "LOGIN_ERROR": "用户名或密码错误，重新再试。",
+    "SIGNUP_TITLE": "注册帐号",
+	"SIGNUP_ERROR": "Unable to create account. Please check your account information and try again.",
+	"SIGNUP_SUCCESS": "Registration saved! Please check your email for confirmation.",
+	"EXISTING_USER_ERROR": "此电子邮件地址已经注册，请换一个。",
+	"INVALID_PASSWORD_ERROR": "用户名或密码错误，重新再试。",
+	"SIGNUP_BUTTON": "注册帐号",
+	"SIGNOUT_BUTTON": "退出登录",
+
+	"MOBILE_NUMBER_OR_EMAIL": "请输入手机号码或者电子邮件地址",
+	"SHOULD_BE_A_MOBILE_NUMBER_OR_A_VALID_EMAIL_ADDRESS": "请输入正确的手机号码或者电子邮件地址。",
+
+	"SHOULD_BE_A_VALID_MOBILE_NUMBER": "请输入有效的手机号码。",
+	"SHOULD_BE_A_VALID_EMAIL_ADDRESS": "请输入有效电子邮件地址。",
+	"SHOULD_BE_AT_LEAST_X_CHARACTERS_LONG": "请输入至少 {{minlength}} 个字符长。",
+	"SHOULD_BE_A_VALID_FIRST_NAME": "请输入正确的名字。",
+	"SHOULD_BE_A_VALID_LAST_NAME": "请输入正确的姓。",
+	"SHOULD_BE_A_VALID_LANGUAGE_NAME": "请输入正确的语言",
+	
+	"BOOK_TABLE_TITLE": "预订桌子",
+	"NUMBER_OF_GUESTS": "客人人数",
+	"NUMBER_OF_TABLES":"预订桌子数",
+	"OPTIONAL": "可选项，可不填",
+	"DATE": "日期(年-月-日)",
+	"TIME": "时间(时:分)",
+	"MESSAGE": "留言",
+	"LEAVE_A_MESSAGE_IF_YOU_HAVE_OTHER_REQUIREMENTS": "如有特别要求请留言。",
+	"BOOK_TABLE_BUTTON": "预订桌子",
+	
+	"SHOULD_BE_A_VALID_INTEGER_X": "请输入数字 {{int_range}}。",
+	"SHOULD_BE_A_FUTURE_TIME": "请输入一个未来时间（不能选择过去时间）。",
+	"SHOULD_BE_LESS_THAN_X_CHARACTERS_LONG": "请输入至少 {{maxlength}} 个字符长。",
+	
+	"BOOKINGS_TITLE": "订单",
+	"GUESTS": "客人数",
+	"TABLES": "桌子数",
+	
+	"CANCELLING": "取消"
+	
+	
+}

@@ -1,0 +1,67 @@
+{
+    "LANGUAGE": "Language",
+	"PREFERRED_LANGUAGE": "Preferred Language",
+
+    "BACK_BUTTON_TEXT": "Back",
+
+	"BOOK_A_TABLE": "Book a Table",
+	"MY_BOOKINGS": "My Bookings",	
+
+    "NAME": "Name",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "EMAIL": "Email",
+	"MOBILE_NUMBER": "Mobile Number",
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "REMEMBER_ME": "Remember Me",
+	"LOGIN": "Sign in",
+	"SIGNUP": "Sign up",
+	"NO_ACCOUNT_YET": "No account yet? Sign up",
+
+	"WELCOME_TITLE": "Welcome",
+	"LOGOUT_TITLE": "Logout",
+
+    "LOGIN_TITLE": "Log in",
+    "LOGIN_BUTTON": "Sign in",
+    "LOGIN_ERROR": "Incorrect username or password.",
+    "SIGNUP_TITLE": "Sign up",
+	"SIGNUP_ERROR": "Unable to create account. Please check your account information and try again.",
+	"SIGNUP_SUCCESS": "Registration saved! Please check your email for confirmation.",
+	"EXISTING_USER_ERROR": "Email is already in use! Please choose another one.",
+	"INVALID_PASSWORD_ERROR": "Invalid password, please try again.",
+	"SIGNUP_BUTTON": "Sign up",
+	"SIGNOUT_BUTTON": "Sign Out",
+
+	"MOBILE_NUMBER_OR_EMAIL": "mobile number or email",
+	"SHOULD_BE_A_MOBILE_NUMBER_OR_A_VALID_EMAIL_ADDRESS": "Should be a mobile number or a valid email address.",
+
+	"SHOULD_BE_A_VALID_MOBILE_NUMBER": "Should be a valid mobile number.",
+	"SHOULD_BE_A_VALID_EMAIL_ADDRESS": "Should be a valid email address.",
+	"SHOULD_BE_AT_LEAST_X_CHARACTERS_LONG": "Should be at least {{minlength}} characters long.",
+	"SHOULD_BE_A_VALID_FIRST_NAME": "Should be a valid first name.",
+	"SHOULD_BE_A_VALID_LAST_NAME": "Should be a valid last name.",
+	"SHOULD_BE_A_VALID_LANGUAGE_NAME": "Should be a valid language name.",
+	
+	"BOOK_TABLE_TITLE": "Book a Table",
+	"NUMBER_OF_GUESTS": "Number of guests",
+	"NUMBER_OF_TABLES":"Number of tables",
+	"OPTIONAL": "Optional",
+	"DATE": "Date (yyyy-mm-dd)",
+	"TIME": "Time (hh:mm)",
+	"MESSAGE": "Message",
+	"LEAVE_A_MESSAGE_IF_YOU_HAVE_OTHER_REQUIREMENTS": "Leave a message if you have other requirements",
+	"BOOK_TABLE_BUTTON": "Book Table",
+	
+	"SHOULD_BE_A_VALID_INTEGER_X": "Should be a valid integer {{int_range}}.",
+	"SHOULD_BE_A_FUTURE_TIME": "Should be a future time.",
+	"SHOULD_BE_LESS_THAN_X_CHARACTERS_LONG": "Should be less than {{maxlength}} characters long.",
+	
+	"BOOKINGS_TITLE": "Bookings",
+	"GUESTS": "Guests",
+	"TABLES": "Tables",
+	
+	"CANCELLING": "Cancelling"
+	
+	
+}

@@ -36,7 +36,7 @@ entity SocialUser {
     firstName String
     lastName String
     authToken String
-    idToken String
+    idToken TextBlob
     authorizationCode String
     /**
      * Contains the entire object returned from the Facebook API based on the fields you requested.

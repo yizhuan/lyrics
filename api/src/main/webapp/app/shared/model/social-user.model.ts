@@ -8,7 +8,7 @@ export interface ISocialUser {
   firstName?: string;
   lastName?: string;
   authToken?: string;
-  idToken?: string;
+  idToken?: any;
   authorizationCode?: string;
   facebook?: any;
   linkedIn?: any;
@@ -25,7 +25,7 @@ export class SocialUser implements ISocialUser {
     public firstName?: string,
     public lastName?: string,
     public authToken?: string,
-    public idToken?: string,
+    public idToken?: any,
     public authorizationCode?: string,
     public facebook?: any,
     public linkedIn?: any

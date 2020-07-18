@@ -48,6 +48,7 @@ public class SocialUser implements Serializable {
     @Column(name = "auth_token")
     private String authToken;
 
+    @Lob
     @Column(name = "id_token")
     private String idToken;
 

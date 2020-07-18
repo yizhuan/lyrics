@@ -35,7 +35,8 @@
     },
     {
       "fieldName": "idToken",
-      "fieldType": "String"
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
     },
     {
       "fieldName": "authorizationCode",

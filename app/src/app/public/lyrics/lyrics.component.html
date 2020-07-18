@@ -1,0 +1,33 @@
+<ion-card>
+
+  <ion-card-header>
+
+    <ion-card-subtitle>
+      <ion-list>
+        <ion-row>
+          <ion-col><ion-label>Languages:</ion-label></ion-col>
+          <ion-col *ngFor="let lang of languages" (click)="onSwitchLanguage(lang)">
+            <ion-label *ngIf="selectedLang == lang" color="primary">{{ lang }}</ion-label>
+            <ion-label *ngIf="selectedLang != lang">{{ lang }}</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </ion-card-subtitle>
+
+    <ion-card-title>{{ song.name }}</ion-card-title>
+
+
+    <!--
+      <ion-label *ngFor="let lang of languages" (click)="onSwitchLanguage(lang)" ><ion-icon name="radio-button-on-outline" color="primary"></ion-icon> {{ lang }} </ion-label>
+    -->
+
+  </ion-card-header>
+
+  <ion-card-content class="" style="padding-top:0; white-space: pre-wrap;">
+    <ion-text [innerHtml]="lyrics.lyrics"></ion-text>
+  </ion-card-content>
+
+</ion-card>
+<!-- 
+<ion-text> {{ lyrics | json }}</ion-text>
+-->

@@ -53,4 +53,9 @@ public interface SocialUserService {
      * @return the list of entities.
      */
     Page<SocialUser> search(String query, Pageable pageable);
+    
+    
+    Optional<SocialUser> findOneByEmailIgnoreCase(String email);
+
+	Optional<SocialUser> findOneByEmailIgnoreCaseAndProviderIgnoreCase(String email, String provider);
 }

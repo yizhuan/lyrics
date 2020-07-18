@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>{{'LOGIN_TITLE' | translate }}</ion-title>
+
+    <ion-item slot="end" color="light" lines="none">
+      <ion-label>{{ 'LANGUAGE' | translate }}</ion-label>
+      <ion-select ngModel name="langKey" [selectedText]="currentLanguage" #langKeyCtl="ngModel" (ionChange)="onChangeLanguage($event)">
+        <ion-select-option *ngFor="let lang of languages" [value]="lang.code">{{lang.language}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+
+  <ion-grid *ngIf="isBadCredential">
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-item>
+          <ion-label *ngIf="isBadCredential" color="danger">{{ 'LOGIN_ERROR'| translate}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-grid>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-list lines="full" class="ion-no-margin ion-no-padding">
+            <ion-item>
+              <ion-label position="stacked">{{ 'USERNAME'|translate}}</ion-label>
+              <ion-input type="text" ngModel name="login" required #emailCtl="ngModel" [placeholder]="'MOBILE_NUMBER_OR_EMAIL'|translate"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!emailCtl.valid && emailCtl.touched" lines="none">
+              <ion-label>{{'SHOULD_BE_A_MOBILE_NUMBER_OR_A_VALID_EMAIL_ADDRESS'|translate}}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">{{'PASSWORD' | translate }}</ion-label>
+              <ion-input type="password" ngModel name="password" required minlength="4" #passwordCtl="ngModel">
+              </ion-input>
+            </ion-item>
+            <ion-item *ngIf="!passwordCtl.valid && passwordCtl.touched" lines="none">
+              <ion-label>{{'SHOULD_BE_AT_LEAST_X_CHARACTERS_LONG'|translate: {minlength: 4} }}</ion-label>
+            </ion-item>
+
+          </ion-list>
+
+        </ion-col>
+      </ion-row>
+     
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+
+          <ion-button type="button" fill="clear" expand="block">
+            <a [routerLink]="['/register']">{{'NO_ACCOUNT_YET' | translate }}</a>
+          </ion-button>
+
+          <ion-button type="submit" color="primary" expand="block" [disabled]="!f.valid">
+            {{ 'LOGIN_BUTTON' | translate }}
+          </ion-button>
+
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+
+          <ion-list>
+            
+              <ion-button color="primary" fill="outline" expand="block" (click)="signInWithGoogle()">
+                <ion-icon name="logo-google"></ion-icon>
+                Sign in with Google
+              </ion-button>
+        
+              <ion-button color="primary" expand="block" (click)="signInWithFB()">
+                <ion-icon name="logo-facebook"></ion-icon>        
+                Sign in with Facebook
+              </ion-button>
+                    
+          </ion-list>
+          
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
+</ion-content>

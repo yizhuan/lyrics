@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome to Lyrics</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-searchbar (ionChange)="onSearchSong($event)" debounce="1000"></ion-searchbar>
+
+  <app-lyrics [songId]="songId" [lang]="lang" ></app-lyrics>
+
+</ion-content>

@@ -1,0 +1,67 @@
+{
+    "LANGUAGE": "언어",
+	"PREFERRED_LANGUAGE": "선호하는 언어",
+
+    "BACK_BUTTON_TEXT": "반환",
+
+	"BOOK_A_TABLE": "테이블을 예약",
+	"MY_BOOKINGS": "나의 예약",	
+
+    "NAME": "이름",
+    "FIRST_NAME": "이름",
+    "LAST_NAME": "성",
+    "EMAIL": "이메일",
+	"MOBILE_NUMBER": "휴대 전화 번호",
+    "USERNAME": "사용자 이름",
+    "PASSWORD": "암호",
+    "REMEMBER_ME": "날 기억해",
+	"LOGIN": "로그인",
+	"SIGNUP": "가입하기",
+	"NO_ACCOUNT_YET": "아직 계정이 없습니다? 가입하기",
+
+	"WELCOME_TITLE": "어서 오십시오",
+	"LOGOUT_TITLE": "로그 아웃",
+
+    "LOGIN_TITLE": "로그인",
+    "LOGIN_BUTTON": "로그인",
+    "LOGIN_ERROR": "잘못된 사용자 이름 또는 비밀번호.",
+    "SIGNUP_TITLE": "가입하기",
+	"SIGNUP_ERROR": "Unable to create account. Please check your account information and try again.",
+	"SIGNUP_SUCCESS": "Registration saved! Please check your email for confirmation.",
+	"EXISTING_USER_ERROR": "Email is already in use! Please choose another one.",
+	"INVALID_PASSWORD_ERROR": "Invalid password, please try again.",
+	"SIGNUP_BUTTON": "가입하기",
+	"SIGNOUT_BUTTON": "로그 아웃",
+
+	"MOBILE_NUMBER_OR_EMAIL": "휴대폰 번호 또는 이메일",
+	"SHOULD_BE_A_MOBILE_NUMBER_OR_A_VALID_EMAIL_ADDRESS": "Should be a mobile number or a valid email address.",
+
+	"SHOULD_BE_A_VALID_MOBILE_NUMBER": "Should be a valid mobile number.",
+	"SHOULD_BE_A_VALID_EMAIL_ADDRESS": "Should be a valid email address.",
+	"SHOULD_BE_AT_LEAST_X_CHARACTERS_LONG": "Should be at least {{minlength}} characters long.",
+	"SHOULD_BE_A_VALID_FIRST_NAME": "Should be a valid first name.",
+	"SHOULD_BE_A_VALID_LAST_NAME": "Should be a valid last name.",
+	"SHOULD_BE_A_VALID_LANGUAGE_NAME": "Should be a valid language name.",
+	
+	"BOOK_TABLE_TITLE": "테이블을 예약",
+	"NUMBER_OF_GUESTS": "손님 수",
+	"NUMBER_OF_TABLES":"테이블 수",
+	"OPTIONAL": "선택 과목",
+	"DATE": "데이트",
+	"TIME": "시각",
+	"MESSAGE": "메시지",
+	"LEAVE_A_MESSAGE_IF_YOU_HAVE_OTHER_REQUIREMENTS": "다른 요구 사항이 있으면 메시지를 남겨주세요",
+	"BOOK_TABLE_BUTTON": "테이블을 예약",
+	
+	"SHOULD_BE_A_VALID_INTEGER_X": "Should be a valid integer {{int_range}}.",
+	"SHOULD_BE_A_FUTURE_TIME": "Should be a future time.",
+	"SHOULD_BE_LESS_THAN_X_CHARACTERS_LONG": "Should be less than {{maxlength}} characters long.",
+	
+	"BOOKINGS_TITLE": "예약",
+	"GUESTS": "손님 수",
+	"TABLES": "테이블 수",
+	
+	"CANCELLING": "취소"
+	
+	
+}

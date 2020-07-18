@@ -40,7 +40,7 @@
             <column name="auth_token" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="id_token" type="varchar(255)">
+            <column name="id_token" type="${clobType}">
                 <constraints nullable="true" />
             </column>
             <column name="authorization_code" type="varchar(255)">
@@ -83,7 +83,7 @@
             <column name="first_name" type="string"/>
             <column name="last_name" type="string"/>
             <column name="auth_token" type="string"/>
-            <column name="id_token" type="string"/>
+            <column name="id_token" type="clob"/>
             <column name="authorization_code" type="string"/>
             <column name="facebook" type="clob"/>
             <column name="linked_in" type="clob"/>
