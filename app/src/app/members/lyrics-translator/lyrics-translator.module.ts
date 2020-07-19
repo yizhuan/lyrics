@@ -16,7 +16,12 @@ import { QuillModule } from 'ngx-quill';
     FormsModule,
     QuillModule.forRoot({
       modules: {
-        syntax: true
+        syntax: false,
+        toolbar: [['bold', 'italic'],
+        [{ 'color': [] }, { 'background': [] }],
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+        [{ 'font': [] }],
+        [{ 'align': [] }]]
       }
     }),
     IonicModule,    

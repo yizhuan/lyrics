@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class LyricsTranslatorPage implements OnInit {
 
-  htmlContent: string;
+  lyricsTranslation: string;
 
   constructor() { }
 
@@ -17,6 +17,10 @@ export class LyricsTranslatorPage implements OnInit {
 
   onSubmit(form: NgForm) {
     console.log(form);
+
+    this.lyricsTranslation = form.value.htmlContent;
+
+    console.log(this.lyricsTranslation);
   }
 
 }
