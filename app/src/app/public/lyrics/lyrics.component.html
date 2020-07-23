@@ -9,10 +9,11 @@
             <ion-label [color]="selectedLang == lang ? 'primary':''" *ngFor="let lang of languages" (click)="onSwitchLanguage(lang)">
               <ion-icon [name]="selectedLang == lang ?'radio-button-on-outline':'radio-button-off-outline'"></ion-icon> {{ lang }} 
             </ion-label>
+
             <ion-icon name="radio-button-off-outline"></ion-icon>
             <a [routerLink]="['/members/lyrics/new']" [queryParams]="{songId: song.id}">I want to add new translation</a>
           </ion-col>
-        </ion-row>        
+        </ion-row>
       </ion-grid>        
     </ion-card-subtitle>
 
