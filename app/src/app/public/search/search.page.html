@@ -21,11 +21,23 @@
           </ion-col>        
           -->
           <ion-col size-sm="6" offset-sm="3">
+            <!--
             <a [attr.href]="'/home?songId=' + song.id + '&lang='+ song.lang">{{ song.name }}</a>
+            -->
+            <a [routerLink]="['/home']" [queryParams]="{songId: song.id, lang: song.lang}">{{ song.name }}</a>
           </ion-col>
         </ion-row>
       </ion-list>    
     </ion-card-content>
   </ion-card>
+
+  <ion-item *ngIf="!searchResults?.length">
+    <ion-label>
+      No Songs found.
+    </ion-label>    
+  </ion-item>
+  <ion-item *ngIf="!searchResults?.length">
+    <ion-button [routerLink]="['/members/song/new']">Add a New Song</ion-button>
+  </ion-item>
 
 </ion-content>

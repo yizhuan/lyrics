@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Lyrics
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="fixed">Song Id</ion-label>
+      <div item-content>
+        <span>{{lyrics.songId}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Lyrics</ion-label>
+      <div item-content>
+        <!--
+        <span>{{lyrics.lyrics}}</span>
+        -->
+        <ion-text [innerHtml]="lyrics.lyrics"></ion-text>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Lang</ion-label>
+      <div item-content>
+        <span>{{lyrics.lang}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Author</ion-label>
+      <div item-content>
+        <span>{{lyrics.author}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Copyright</ion-label>
+      <div item-content>
+        <span>{{lyrics.copyright}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Is Translated</ion-label>
+      <div item-content>
+        <span>{{lyrics.isTranslated}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Translated By</ion-label>
+      <div item-content>
+        <span>{{lyrics.translatedBy}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Charset</ion-label>
+      <div item-content>
+        <span>{{lyrics.charset}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Last Modified</ion-label>
+      <div item-content>
+        <span>{{lyrics.lastModified | date:'medium'}}</span>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="primary" (click)="open(lyrics)">{{ 'EDIT_BUTTON' | translate }}</ion-button>
+  <ion-button expand="block" color="danger" (click)="deleteModal(lyrics)">{{ 'DELETE_BUTTON' | translate }}</ion-button>
+</ion-content>

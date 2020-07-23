@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Lyrics
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button [disabled]="!isReadyToSave" (click)="save()" color="primary">
+        <span *ngIf="platform.is('ios')">{{'DONE_BUTTON' | translate}}</span>
+        <ion-icon name="checkmark" *ngIf="!platform.is('ios')"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form *ngIf="form" name="form" [formGroup]="form" (ngSubmit)="save()">
+    <ion-list>
+      <ion-item [hidden]="!form.get('id')">
+        <ion-label>ID</ion-label>
+        <ion-input type="hidden" id="id" formControlName="id" readonly></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Song Id</ion-label>
+        <ion-input type="number" name="songId" formControlName="songId"></ion-input>
+      </ion-item>
+      <ion-item>
+        <!--
+        <ion-textarea placeholder="Lyrics" formControlName="lyrics" id="field_lyrics"></ion-textarea>
+        -->
+        <quill-editor placeholder="Lyrics ..." name="lyrics" formControlName="lyrics" id="field_lyrics"></quill-editor>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Lang</ion-label>
+        <ion-input type="text" name="lang" formControlName="lang"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Author</ion-label>
+        <ion-input type="text" name="author" formControlName="author"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Copyright</ion-label>
+        <ion-input type="text" name="copyright" formControlName="copyright"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Is Translated</ion-label>
+        <ion-checkbox formControlName="isTranslated"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Translated By</ion-label>
+        <ion-input type="text" name="translatedBy" formControlName="translatedBy"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Charset</ion-label>
+        <ion-input type="text" name="charset" formControlName="charset"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Last Modified</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" formControlName="lastModified" id="field_lastModified"></ion-datetime>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

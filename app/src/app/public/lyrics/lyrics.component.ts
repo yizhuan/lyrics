@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Song } from 'src/app/models/song';
-import { Lyrics } from 'src/app/models/lyrics';
+import { Song } from 'src/app/members/song';
+import { Lyrics } from 'src/app/members/lyrics';
 import { SongService } from 'src/app/services/lyrics/song.service';
 import { LyricsService } from 'src/app/services/lyrics/lyrics.service';
 

@@ -53,4 +53,10 @@ public interface LyricsService {
      * @return the list of entities.
      */
     Page<Lyrics> search(String query, Pageable pageable);
+    
+    
+    
+    Optional<Lyrics> findOneBySongIdAndLang(Long songId, String lang);
+	
+	Page<Lyrics> findAllBySongId(Long songId, Pageable pageable);
 }

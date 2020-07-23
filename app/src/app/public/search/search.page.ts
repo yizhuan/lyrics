@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Song } from 'src/app/models/song';
-import { SongService } from '../../services/lyrics/song.service';
+import { Song } from 'src/app/members/song';
+import { SongService } from 'src/app/members/song';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -25,8 +25,8 @@ export class SearchPage implements OnInit {
   }
 
   onSearchSong(event: any) {
-    const val = event.target.value;
-    console.log(val);   
-    this.searchResults = this.songService.find(val);
+    const queryString = event.target.value;
+    console.log(queryString);   
+    this.searchResults = this.songService.find(queryString);
   }
 }
