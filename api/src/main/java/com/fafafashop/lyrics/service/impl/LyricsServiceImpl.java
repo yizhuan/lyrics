@@ -69,4 +69,14 @@ public class LyricsServiceImpl implements LyricsService {
     public Page<Lyrics> search(String query, Pageable pageable) {
         log.debug("Request to search for a page of Lyrics for query {}", query);
         return lyricsSearchRepository.search(queryStringQuery(query), pageable);    }
+    
+    
+    
+    public Optional<Lyrics> findOneBySongIdAndLang(Long songId, String lang) {
+		return this.lyricsRepository.findOneBySongIdAndLang(songId, lang);
+	}
+	
+    public Page<Lyrics> findAllBySongId(Long songId, Pageable pageable) {
+		return this.lyricsRepository.findAllBySongId(songId, pageable);
+	}
 }

@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Song
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="fixed">Name</ion-label>
+      <div item-content>
+        <span>{{song.name}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Description</ion-label>
+      <div item-content>
+        <span>{{song.description}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Composed By</ion-label>
+      <div item-content>
+        <span>{{song.composedBy}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Artist</ion-label>
+      <div item-content>
+        <span>{{song.artist}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Album</ion-label>
+      <div item-content>
+        <span>{{song.album}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Band</ion-label>
+      <div item-content>
+        <span>{{song.band}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Year</ion-label>
+      <div item-content>
+        <span>{{song.year}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Copyright</ion-label>
+      <div item-content>
+        <span>{{song.copyright}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Lang</ion-label>
+      <div item-content>
+        <span>{{song.lang}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Audio Url</ion-label>
+      <div item-content>
+        <span>{{song.audioUrl}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Video Url</ion-label>
+      <div item-content>
+        <span>{{song.videoUrl}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Entered By</ion-label>
+      <div item-content>
+        <span>{{song.enteredBy}}</span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Last Modified</ion-label>
+      <div item-content>
+        <span>{{song.lastModified | date:'medium'}}</span>
+      </div>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-button expand="block" color="primary" [routerLink]="['/members/lyrics/new']" [queryParams]="{songId: song?.id}">Add Lyrics</ion-button>
+
+  <ion-button expand="block" color="primary" (click)="open(song)">{{ 'EDIT_BUTTON' | translate }}</ion-button>
+  <ion-button expand="block" color="danger" (click)="deleteModal(song)">{{ 'DELETE_BUTTON' | translate }}</ion-button>
+</ion-content>

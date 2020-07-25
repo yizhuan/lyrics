@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   { 
     path: 'members', 
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     loadChildren: './members/member-routing.module#MemberRoutingModule'
   },
   {

@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>LyricsTranslator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" id="lyricstranslatorform001">
+    <ion-button type="submit">Save</ion-button>
+    <quill-editor  ngModel name="htmlContent"></quill-editor>      
+  </form>
+
+</ion-content>

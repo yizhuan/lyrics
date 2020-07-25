@@ -26,6 +26,7 @@ import {
 } from 'angularx-social-login';
 
 import { environment } from 'src/environments/environment';
+import { QuillModule } from 'ngx-quill';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,8 +38,18 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [BrowserModule, 
     HttpClientModule, 
     IonicModule.forRoot(), 
-    AppRoutingModule, 
+    AppRoutingModule,     
     SocialLoginModule,
+    QuillModule.forRoot({
+      modules: {
+        syntax: false,
+        toolbar: [['bold', 'italic'],
+        [{ 'color': [] }, { 'background': [] }],
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+        [{ 'font': [] }],
+        [{ 'align': [] }]]
+      }
+    }),
     IonicStorageModule.forRoot(), 
     NgxWebstorageModule.forRoot(),     
     TranslateModule.forRoot({

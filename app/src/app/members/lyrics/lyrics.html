@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Lyrics
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- todo: add elasticsearch support -->
+<ion-content class="ion-padding">
+  <ion-refresher [disabled]="plt.is('desktop')" slot="fixed" (ionRefresh)="loadAll($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let lyrics of lyrics; trackBy: trackId" #slidingItem>
+      <ion-item (click)="view(lyrics)">
+        <ion-label text-wrap>
+          <p>{{lyrics.songId}}</p>
+          <!--
+          <p>{{lyrics.lyrics}}</p>
+          -->
+          <p>
+            <ion-text [innerHtml]="lyrics.lyrics"></ion-text>
+          </p>
+          <p>{{lyrics.lang}}</p>
+          <p>{{lyrics.author}}</p>
+          <p>{{lyrics.copyright}}</p>
+          <p>{{lyrics.isTranslated}}</p>
+          <p>{{lyrics.translatedBy}}</p>
+          <p>{{lyrics.charset}}</p>
+          <p>{{lyrics.lastModified | date:'medium'}}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="primary" (click)="edit(slidingItem, lyrics)">
+          {{ 'EDIT_BUTTON' | translate }}
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="delete(lyrics)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-item *ngIf="!lyrics?.length">
+    <ion-label>
+      No Lyrics found.
+    </ion-label>
+  </ion-item>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="new(lyrics[0])">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

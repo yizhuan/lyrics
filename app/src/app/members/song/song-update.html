@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Song
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button [disabled]="!isReadyToSave" (click)="save()" color="primary">
+        <span *ngIf="platform.is('ios')">{{'DONE_BUTTON' | translate}}</span>
+        <ion-icon name="checkmark" *ngIf="!platform.is('ios')"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form *ngIf="form" name="form" [formGroup]="form" (ngSubmit)="save()">
+    <ion-list>
+      <ion-item [hidden]="!form.get('id')">
+        <ion-label>ID</ion-label>
+        <ion-input type="hidden" id="id" formControlName="id" readonly></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="text" name="name" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-input type="text" name="description" formControlName="description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Composed By</ion-label>
+        <ion-input type="text" name="composedBy" formControlName="composedBy"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Artist</ion-label>
+        <ion-input type="text" name="artist" formControlName="artist"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Album</ion-label>
+        <ion-input type="text" name="album" formControlName="album"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Band</ion-label>
+        <ion-input type="text" name="band" formControlName="band"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Year</ion-label>
+        <ion-input type="text" name="year" formControlName="year"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Copyright</ion-label>
+        <ion-input type="text" name="copyright" formControlName="copyright"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Lang</ion-label>
+        <ion-input type="text" name="lang" formControlName="lang"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Audio Url</ion-label>
+        <ion-input type="text" name="audioUrl" formControlName="audioUrl"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Video Url</ion-label>
+        <ion-input type="text" name="videoUrl" formControlName="videoUrl"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Entered By</ion-label>
+        <ion-input type="text" name="enteredBy" formControlName="enteredBy"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Last Modified</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" formControlName="lastModified" id="field_lastModified"></ion-datetime>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

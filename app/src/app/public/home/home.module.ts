@@ -13,7 +13,7 @@ import { LyricsComponent } from '../lyrics/lyrics.component';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule,  
     HomePageRoutingModule
   ],
   declarations: [HomePage, LyricsComponent]

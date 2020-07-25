@@ -3,29 +3,32 @@
   <ion-card-header>
 
     <ion-card-subtitle>
-      <ion-list>
-        <ion-row>
-          <ion-col><ion-label>Languages:</ion-label></ion-col>
-          <ion-col *ngFor="let lang of languages" (click)="onSwitchLanguage(lang)">
-            <ion-label *ngIf="selectedLang == lang" color="primary">{{ lang }}</ion-label>
-            <ion-label *ngIf="selectedLang != lang">{{ lang }}</ion-label>
+      <ion-grid class="ion-no-padding">
+        <ion-row>          
+          <ion-col>
+            <ion-label [color]="selectedLang == lang ? 'primary':''" 
+                  *ngFor="let lang of languages" (click)="onSwitchLanguage(lang)">
+              <ion-icon [name]="selectedLang == lang ?'radio-button-on-outline':'radio-button-off-outline'"></ion-icon> {{ lang }} 
+            </ion-label>
+
+            <ion-icon *ngIf="song" name="radio-button-off-outline"></ion-icon>
+            <a *ngIf="song" [routerLink]="['/members/lyrics/new']" [queryParams]="{songId: song?.id}">I want to add new translation</a>
           </ion-col>
         </ion-row>
-      </ion-list>
+      </ion-grid>        
     </ion-card-subtitle>
 
-    <ion-card-title>{{ song.name }}</ion-card-title>
-
-
-    <!--
-      <ion-label *ngFor="let lang of languages" (click)="onSwitchLanguage(lang)" ><ion-icon name="radio-button-on-outline" color="primary"></ion-icon> {{ lang }} </ion-label>
-    -->
+    <ion-card-title *ngIf="song">{{ song?.name }}</ion-card-title>
 
   </ion-card-header>
 
-  <ion-card-content class="" style="padding-top:0; white-space: pre-wrap;">
-    <ion-text [innerHtml]="lyrics.lyrics"></ion-text>
+  <ion-card-content *ngIf="lyrics" class="" style="padding-top:0; white-space: pre-wrap;">
+    <ion-text [innerHtml]="lyrics?.lyrics"></ion-text>
   </ion-card-content>
+
+  <ion-item>
+    <a *ngIf="song" [routerLink]="['/members/lyrics/'+lyrics?.id+'/edit']">Edit</a>
+  </ion-item>
 
 </ion-card>
 <!-- 

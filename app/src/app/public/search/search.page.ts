@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Song } from 'src/app/models/song';
-import { SongService } from '../../services/lyrics/song.service';
+import { Song } from 'src/app/members/song';
+import { SongService } from 'src/app/members/song';
 import { ActivatedRoute } from '@angular/router';
+import { filter, map } from 'rxjs/operators';
+import { HttpResponse } from '@angular/common/http';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -16,17 +19,27 @@ export class SearchPage implements OnInit {
   constructor(private songService: SongService, private route: ActivatedRoute,) { }
 
   ngOnInit() {
-
     this.route.queryParams.subscribe(params => {
       const q = params['q'];
-      this.searchResults = this.songService.find(q);
+      this.searchSongName(q).subscribe();      
     });
-
   }
 
   onSearchSong(event: any) {
-    const val = event.target.value;
-    console.log(val);   
-    this.searchResults = this.songService.find(val);
+    const queryString = event.target.value;
+    this.searchSongName(queryString).subscribe();
   }
+
+  searchSongName(q: string) {
+    if (q) {
+      console.log("searching: "+q);   
+      return this.songService.query({'name.contains': q})
+        .pipe(
+          filter((res: HttpResponse<Song[]>) => res.ok),
+          map((res: HttpResponse<Song[]>) => this.searchResults = res.body)
+        );
+    }
+    return of(<Song[]>[]);
+  }
+
 }

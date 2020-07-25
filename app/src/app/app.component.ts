@@ -36,9 +36,9 @@ export class AppComponent {
       this.authenticationService.authenticationState.subscribe(state => {
         console.log(this.authenticationService.userId + "=====state changed: " + state)
 
-        if (this.authenticationService.userId != null && state) {
-          this.router.navigate(['members', 'dashboard']);
-        } // else {
+        // if (this.authenticationService.userId != null && state) {
+        //   this.router.navigate(['members', 'dashboard']);
+        // } // else {
           // this.router.navigate(['login']);
           // this.router.navigate(['home']);
         // }
