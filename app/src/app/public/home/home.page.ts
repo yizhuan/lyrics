@@ -9,13 +9,28 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HomePage implements OnInit {
 
-  songId: number = 1;
-  lang: string = "zh-CN";
+  songId: number;
+  lang: string;
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) { 
+    this.songId=11;
+    this.lang="en";
+  }
 
-  ngOnInit() {    
+  ngOnInit() {  
+    console.log("----ngOnInit----");
+    this.retrieveUrlParams();
+  }
+
+  ionViewWillEnter() {
+ 
+  }
+
+  retrieveUrlParams() {
     this.route.queryParams.subscribe(params => {
+      console.log("----params----");
+      console.log(params);
+      console.log("-----params-----");
       if (params['songId'] != null ) {
         this.songId = params['songId'];
         this.lang = params['lang'];

@@ -68,8 +68,8 @@ export class LyricsPage {
     return item.id;
   }
 
-  new() {
-    this.navController.navigateForward('/members/lyrics/new');
+  new(lyrics: Lyrics) {
+    this.navController.navigateForward('/members/lyrics/new'+'?songId='+ lyrics.songId);
   }
 
   edit(item: IonItemSliding, lyrics: Lyrics) {

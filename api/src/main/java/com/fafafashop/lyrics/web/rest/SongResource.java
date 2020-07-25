@@ -3,6 +3,8 @@ package com.fafafashop.lyrics.web.rest;
 import com.fafafashop.lyrics.domain.Song;
 import com.fafafashop.lyrics.service.SongService;
 import com.fafafashop.lyrics.web.rest.errors.BadRequestAlertException;
+import com.fafafashop.lyrics.service.dto.SongCriteria;
+import com.fafafashop.lyrics.service.SongQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.PaginationUtil;
@@ -42,8 +44,11 @@ public class SongResource {
 
     private final SongService songService;
 
-    public SongResource(SongService songService) {
+    private final SongQueryService songQueryService;
+
+    public SongResource(SongService songService, SongQueryService songQueryService) {
         this.songService = songService;
+        this.songQueryService = songQueryService;
     }
 
     /**
@@ -90,14 +95,27 @@ public class SongResource {
      * {@code GET  /songs} : get all the songs.
      *
      * @param pageable the pagination information.
+     * @param criteria the criteria which the requested entities should match.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of songs in body.
      */
     @GetMapping("/songs")
-    public ResponseEntity<List<Song>> getAllSongs(Pageable pageable) {
-        log.debug("REST request to get a page of Songs");
-        Page<Song> page = songService.findAll(pageable);
+    public ResponseEntity<List<Song>> getAllSongs(SongCriteria criteria, Pageable pageable) {
+        log.debug("REST request to get Songs by criteria: {}", criteria);
+        Page<Song> page = songQueryService.findByCriteria(criteria, pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
+    }
+
+    /**
+     * {@code GET  /songs/count} : count all the songs.
+     *
+     * @param criteria the criteria which the requested entities should match.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the count in body.
+     */
+    @GetMapping("/songs/count")
+    public ResponseEntity<Long> countSongs(SongCriteria criteria) {
+        log.debug("REST request to count Songs by criteria: {}", criteria);
+        return ResponseEntity.ok().body(songQueryService.countByCriteria(criteria));
     }
 
     /**

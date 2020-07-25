@@ -28,9 +28,14 @@ export class SongService {
     return this.http.get<Lyrics[]>(`${this.resourceUrl}/${id}/lyrics`, { observe: 'response' });
   }
 
+  findOneLyrics(id: number, lang: string): Observable<HttpResponse<Lyrics>> {
+    return this.http.get<Lyrics>(`${this.resourceUrl}/${id}/lyrics/${lang}`, { observe: 'response' });
+  }
+
   query(req?: any): Observable<HttpResponse<Song[]>> {
-    const options = createRequestOption(req);
-    return this.http.get<Song[]>(this.resourceUrl, { params: options, observe: 'response' });
+    // const options = createRequestOption(req);
+    // return this.http.get<Song[]>(this.resourceUrl, { params: options, observe: 'response' });
+    return this.http.get<Song[]>(this.resourceUrl, { params: req, observe: 'response' });
   }
 
   delete(id: number): Observable<HttpResponse<any>> {

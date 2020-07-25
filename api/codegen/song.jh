@@ -1,0 +1,24 @@
+entity Song {	
+	name String
+  description String
+  composedBy String
+  artist String
+  album String
+  band String
+  year String
+  copyright String
+	lang String
+  audioUrl String
+  videoUrl String
+  enteredBy String
+	lastModified ZonedDateTime
+}
+
+filter Song
+
+// Set pagination options
+paginate * with infinite-scroll
+// paginate * with pagination
+
+// Set service options to all except few
+service all with serviceImpl

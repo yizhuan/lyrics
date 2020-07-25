@@ -91,6 +91,9 @@
     </ion-item>
   </ion-list>
 
+
+  <ion-button expand="block" color="primary" [routerLink]="['/members/lyrics/new']" [queryParams]="{songId: song?.id}">Add Lyrics</ion-button>
+
   <ion-button expand="block" color="primary" (click)="open(song)">{{ 'EDIT_BUTTON' | translate }}</ion-button>
   <ion-button expand="block" color="danger" (click)="deleteModal(song)">{{ 'DELETE_BUTTON' | translate }}</ion-button>
 </ion-content>

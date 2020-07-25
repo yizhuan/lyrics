@@ -20,7 +20,8 @@ export class SongPage {
     private toastCtrl: ToastController,
     public plt: Platform
   ) {
-    this.songs = [];
+    // this.songs = [];
+    this.loadAll();
   }
 
   ionViewWillEnter() {

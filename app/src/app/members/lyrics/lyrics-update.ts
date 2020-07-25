@@ -93,7 +93,7 @@ export class LyricsUpdatePage implements OnInit {
     this.isSaving = false;
     const toast = await this.toastCtrl.create({ message: `Lyrics ${action} successfully.`, duration: 2000, position: 'middle' });
     toast.present();
-    this.navController.navigateBack('/members/lyrics');
+    this.navController.navigateBack('/members/lyrics?songId='+this.lyrics.songId);
   }
 
   previousState() {
